@@ -23,6 +23,11 @@ app.post('/book', (req, res) => {
     books.push(book);
 
     res.send('Book is added to the database');
+
+
+    app.get('/books', (req, res) => {
+        res.json(books);
+    });
 });
 
 app.listen(port, () => console.log(`records app listening on port ${port}!`));
