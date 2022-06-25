@@ -5,6 +5,13 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
+app.get('/', (req, res) => {
+    res.send('records, from express');
+});
+
+app.listen(port, () => console.log(`records app listening on port ${port}!`))
+
+
 // Where we will keep books
 let books = [];
 
@@ -19,8 +26,8 @@ app.post('/book', (req, res) => {
     const book = req.body;
 
     // Output the book to the console for debugging
-    console.log(book);
-    books.push(book);
+    console.log(books);
+    books.push(books);
 
     res.send('Book is added to the database');
 
