@@ -84,22 +84,23 @@ app.post('/books/:isbn', (req, res) => {
 
     res.send('book is edited');
 });
-//const setEditModal = (isbn) => {
+
+const setEditModal = (isbn) => {
     // Get information about the book using isbn
-  //  const xhttp = new XMLHttpRequest();
+   const xhttp = new XMLHttpRequest();
 
-    //xhttp.open("GET", `http://localhost:3000/books/${isbn}`, false);
-    //xhttp.send();
+    xhttp.open("GET", `http://localhost:3000/books/${isbn}`, false);
+    xhttp.send();
 
-    //const book = JSON.parse(xhttp.responseText);
+    const book = JSON.parse(xhttp.responseText);
 
-    //const {
-      //  title,
-        //author,
-        //publisher,
-        //publish_date,
-        //numOfPages
-   // } = books;
+    const {
+       title,
+        author,
+        publisher,
+        publish_date,
+        numOfPages
+   } = books;
 
     // Filling information about the book in the form inside the modal
     document.getElementById('isbn').value = isbn;
@@ -111,4 +112,4 @@ app.post('/books/:isbn', (req, res) => {
 
        // Setting up the action url for the book
        document.getElementById('editForm').action = `http://localhost:3000/books/${isbn}`;
-    
+}
