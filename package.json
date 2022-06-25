@@ -1,7 +1,6 @@
 {
   "name": "booksapi",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/cater20/booksApi/issues"
   },
-  "homepage": "https://github.com/cater20/booksApi#readme"
+  "homepage": "https://github.com/cater20/booksApi#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "description": ""
 }
