@@ -55,10 +55,10 @@ app.get('/books/:isbn', (req, res) => {
 });
 
 app.delete('/books/:isbn', (req, res) => {
-    // Reading isbn from the URL
-    const isbn = req.params.isbn;
+     //Reading isbn from the URL
+   const isbn = req.params.isbn;
 
-    // Remove item from the books array
+    //g Remove item from the books array
     books = books.filter(i => {
         if (i.isbn !== isbn) {
             return true;
@@ -68,37 +68,37 @@ app.delete('/books/:isbn', (req, res) => {
 
     res.send('books is deleted');
 });
-app.post('/books/:isbn', (req, res) => {
+//app.post('/books/:isbn', (req, res) => {
     // Reading isbn from the URL
-    const isbn = req.params.isbn;
-    const newBook = req.body;
+  //  const isbn = req.params.isbn;
+   // const newBook = req.body;
 
     // Remove item from the books array
-    for (let i = 0; i < books.length; i++) {
-        let book = books[i]
-        if (book.isbn === isbn) {
-            books[i] = newBook;
-        }
-    }
+    //for (let i = 0; i < books.length; i++) {
+      //  let book = books[i]
+       // if (book.isbn === isbn) {
+         //   books[i] = newBook;
+        //}
+   // }
 
-    res.send('book is edited');
-});
-const setEditModal = (isbn) => {
+    //res.send('book is edited');
+//});
+//const setEditModal = (isbn) => {
     // Get information about the book using isbn
-    const xhttp = new XMLHttpRequest();
+  //  const xhttp = new XMLHttpRequest();
 
-    xhttp.open("GET", `http://localhost:3000/books/${isbn}`, false);
-    xhttp.send();
+    //xhttp.open("GET", `http://localhost:3000/books/${isbn}`, false);
+    //xhttp.send();
 
-    const book = JSON.parse(xhttp.responseText);
+    //const book = JSON.parse(xhttp.responseText);
 
-    const {
-        title,
-        author,
-        publisher,
-        publish_date,
-        numOfPages
-    } = books;
+    //const {
+      //  title,
+        //author,
+        //publisher,
+        //publish_date,
+        //numOfPages
+   // } = books;
 
     // Filling information about the book in the form inside the modal
     document.getElementById('isbn').value = isbn;
@@ -110,4 +110,4 @@ const setEditModal = (isbn) => {
 
        // Setting up the action url for the book
        document.getElementById('editForm').action = `http://localhost:3000/books/${isbn}`;
-    }
+    
