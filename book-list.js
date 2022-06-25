@@ -68,21 +68,22 @@ app.delete('/books/:isbn', (req, res) => {
 
     res.send('books is deleted');
 });
-//app.post('/books/:isbn', (req, res) => {
+
+app.post('/books/:isbn', (req, res) => {
     // Reading isbn from the URL
-  //  const isbn = req.params.isbn;
-   // const newBook = req.body;
+    const isbn = req.params.isbn;
+    const newBook = req.body;
 
     // Remove item from the books array
-    //for (let i = 0; i < books.length; i++) {
-      //  let book = books[i]
-       // if (book.isbn === isbn) {
-         //   books[i] = newBook;
-        //}
-   // }
+    for (let i = 0; i < books.length; i++) {
+        let book = books[i]
+        if (book.isbn === isbn) {
+            books[i] = newBook;
+        }
+   }
 
-    //res.send('book is edited');
-//});
+    res.send('book is edited');
+});
 //const setEditModal = (isbn) => {
     // Get information about the book using isbn
   //  const xhttp = new XMLHttpRequest();
