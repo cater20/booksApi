@@ -21,14 +21,14 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/books/:isbn', (req, res) => {
+app.get('/book/:isbn', (req, res) => {
     // Reading isbn from the URL
     const isbn = req.params.isbn;
 
     // Searching books for the isbn
     for (let book of books) {
         if (book.isbn === isbn) {
-            res.json(books);
+            res.json(book);
             return;
         }
     }
@@ -36,5 +36,9 @@ app.get('/books/:isbn', (req, res) => {
     // Sending 404 when not found something is a good practice
     res.status(404).send('Book not found');
 });
+   // app.get('/books', (req, res) => {
+      //  res.json(books);
+    });
+//});
 
 app.listen(port, () => console.log(`records app listening on port ${port}!`));

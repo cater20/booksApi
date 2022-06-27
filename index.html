@@ -10,9 +10,8 @@
 <body>
    
     <div class="container">
-        <hr>
-        <h1>List of books</h1>
-        <hr>
+    <hr>
+        <h1>List of books</h1><hr>
         <div>
             <div class="row" id="books">
             </div>
@@ -30,7 +29,7 @@
                 </div>
     
                 <div class="modal-body">
-                    <form id="editForm" method="POST">
+                    <form id="editForm" method="GET">
                         <div class="form-group">
                             <label for="ISBN">ISBN</label>
                             <input class="form-control" name="isbn" id="isbn">
@@ -50,6 +49,6 @@
         </div>
     </div>
     <!--Our JS file-->
-    <script src="book-list.js"></script>
+    <script src="./book-list.js"></script>
 </body>
 </html>
