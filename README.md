@@ -4,7 +4,14 @@
 ## By 
 keta chrisphine
 ## Description
-{This is a detailed description of your application, including its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }
+Let's create a simple app to store information about books.
+In this app, we will store information about the ISBN of the book, title, author, published date, and 
+publisher and number of pages.
+
+Naturally, the basic functionality of the API will be CRUD functionality. We'll want to be able to send requests to it to create, read, update and delete 
+Book entities. 
+Of course, an API may do much more than this - provide users with an enpoint to get statistical data.
+
 ## Setup/Installation Requirements
 clone the repo to locall machine
 cd  the repo in the machine terminal
@@ -27,8 +34,7 @@ nodejs
 express
 
 
-## Support and contact details
-{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}
+
 ## Licence 
 ## this under MIT LICENCE
 Copyright <2022> <keta chrisphine>
