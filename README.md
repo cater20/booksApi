@@ -24,6 +24,7 @@ open postman to test the applictaion API
 
 
 ## Live link
+http://127.0.0.1:5500/
 
 ## Technologies Used
 this project has been developed uder a series of technologies such as ;
