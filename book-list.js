@@ -29,16 +29,16 @@ const setEditModal = (isbn) => {
         document.getElementById('editForm').action = `http://localhost:3000/books/${isbn}`;
     }
 }
-
 const deleteBook = (isbn) => {
     const xhttp = new XMLHttpRequest();
 
-    xhttp.open("DELETE", `http://localhost:3000/books/${isbn}`, false);
+    xhttp.open("DELETE", `http://localhost:3000/book/${isbn}`, false);
     xhttp.send();
 
     // Reloading the page
     location.reload();
 }
+
 
 const loadBooks = () => {
     const xhttp = new XMLHttpRequest();
@@ -93,3 +93,4 @@ app.get('/books/:isbn', (req, res) => {
     // Sending 404 when not found something is a good practice
     res.status(404).send('Book not found');
 });
+
