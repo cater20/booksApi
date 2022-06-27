@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.send('records, from express');
 });
 
-app.listen(port, () => console.log(`records app listening on port ${port}!`))
+//app.listen(port, () => console.log(`records app listening on port ${port}!`))
 
 
 // Where we will keep books
@@ -21,20 +21,20 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/book', (req, res) => {
-    
-    const book = req.body;
+app.get('/books/:isbn', (req, res) => {
+    // Reading isbn from the URL
+    const isbn = req.params.isbn;
 
-    // Output the book to the console for debugging
-    console.log(books);
-    books.push(books);
+    // Searching books for the isbn
+    for (let book of books) {
+        if (book.isbn === isbn) {
+            res.json(books);
+            return;
+        }
+    }
 
-    res.send('Book is added to the database');
-
-
-    app.get('/books', (req, res) => {
-        res.json(books);
-    });
+    // Sending 404 when not found something is a good practice
+    res.status(404).send('Book not found');
 });
 
 app.listen(port, () => console.log(`records app listening on port ${port}!`));
