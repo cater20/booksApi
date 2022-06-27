@@ -13,13 +13,19 @@ Book entities.
 Of course, an API may do much more than this - provide users with an enpoint to get statistical data.
 
 ## Setup/Installation Requirements
-clone the repo to locall machine
-cd  the repo in the machine terminal
-cd into the root repo 
-in the application repo root open vscode
-in vscode terminal cd into the repo
-in the program create a database json for the application
-start the server on the terminal of the current repo
+clone the repo to locall machine,
+
+cd  the repo in the machine terminal,
+
+cd into the root repo ,
+in the application repo root open vscode,
+
+in vscode terminal cd into the repo,
+
+in the program create a database json for the application,
+
+start the server on the terminal of the current repo,
+
 open postman to test the applictaion API 
 
 
@@ -52,3 +58,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
 DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ 
+
+  
